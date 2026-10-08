@@ -1,0 +1,340 @@
+:root {
+  /* =========================
+     PREMIUM COLORS
+  ========================== */
+
+  --text: #64748b;
+  --text-h: #0f172a;
+
+  --bg: #f8fafc;
+  --surface: #ffffff;
+
+  --border: #e2e8f0;
+
+  --code-bg: #f1f5f9;
+
+  /* Main brand */
+  --accent: #7c3aed;
+  --accent-light: #8b5cf6;
+  --accent-dark: #6d28d9;
+
+  /* Secondary accent */
+  --cyan: #06b6d4;
+
+  --accent-bg: rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.35);
+
+  --social-bg: rgba(241, 245, 249, 0.7);
+
+  /* Premium shadow */
+  --shadow:
+    rgba(15, 23, 42, 0.08) 0 10px 25px -5px,
+    rgba(15, 23, 42, 0.04) 0 8px 10px -6px;
+
+  --shadow-lg:
+    rgba(15, 23, 42, 0.12) 0 25px 50px -12px;
+
+  --sans:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  --heading:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  --mono:
+    ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+
+  font: 16px/145% var(--sans);
+
+  letter-spacing: 0.15px;
+
+  color-scheme: light;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(124, 58, 237, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(6, 182, 212, 0.06),
+      transparent 28%
+    ),
+    var(--bg);
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   DARK MODE
+========================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #94a3b8;
+    --text-h: #f8fafc;
+
+    --bg: #070b17;
+    --surface: #0f172a;
+
+    --border: #1e293b;
+
+    --code-bg: #111827;
+
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+    --accent-dark: #7c3aed;
+
+    --cyan: #22d3ee;
+
+    --accent-bg: rgba(139, 92, 246, 0.12);
+
+    --accent-border: rgba(139, 92, 246, 0.4);
+
+    --social-bg: rgba(30, 41, 59, 0.6);
+
+    --shadow:
+      rgba(0, 0, 0, 0.35) 0 15px 30px -8px,
+      rgba(0, 0, 0, 0.25) 0 8px 12px -6px;
+
+    background:
+      radial-gradient(
+        circle at 10% 0%,
+        rgba(124, 58, 237, 0.16),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 90% 10%,
+        rgba(6, 182, 212, 0.1),
+        transparent 28%
+      ),
+      #070b17;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+
+/* =========================
+   BODY
+========================== */
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(124, 58, 237, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(6, 182, 212, 0.05),
+      transparent 30%
+    ),
+    var(--bg);
+}
+
+
+/* =========================
+   ROOT
+========================== */
+
+#root {
+  width: 1126px;
+
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  text-align: left;
+
+  border-inline: 1px solid var(--border);
+
+  min-height: 100svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* =========================
+   HEADINGS
+========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+
+  font-weight: 800;
+
+  color: var(--text-h);
+
+  letter-spacing: -0.5px;
+}
+
+
+h1 {
+  font-size: 56px;
+
+  letter-spacing: -1.8px;
+
+  margin: 32px 0;
+
+  line-height: 1.05;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4c1d95,
+      #7c3aed,
+      #06b6d4
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+
+    margin: 20px 0;
+  }
+}
+
+
+h2 {
+  font-size: 24px;
+
+  line-height: 118%;
+
+  letter-spacing: -0.5px;
+
+  margin: 0 0 8px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================
+   TEXT
+========================== */
+
+p {
+  margin: 0;
+}
+
+
+/* =========================
+   CODE
+========================== */
+
+code,
+.counter {
+  font-family: var(--mono);
+
+  display: inline-flex;
+
+  border-radius: 6px;
+
+  color: var(--text-h);
+}
+
+
+code {
+  font-size: 14px;
+
+  line-height: 135%;
+
+  padding: 5px 9px;
+
+  background: var(--code-bg);
+
+  border: 1px solid var(--border);
+}
+
+
+/* =========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--cyan)
+  );
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+
+/* =========================
+   SELECTION
+========================== */
+
+::selection {
+  background: rgba(124, 58, 237, 0.2);
+
+  color: var(--text-h);
+}
